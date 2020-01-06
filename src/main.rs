@@ -83,6 +83,7 @@ fn load(filename: &PathBuf) -> Result<CPU> {
 }
 
 fn main() {
+    env_logger::init();
     let opts = Opt::from_args();
     std::process::exit(match run(&opts.filename) {
         Ok(_) => 0,
